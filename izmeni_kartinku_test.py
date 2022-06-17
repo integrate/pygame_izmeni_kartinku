@@ -4,9 +4,9 @@ screen = pygame.display.set_mode([900, 600])
 
 pic1 = pygame.image.load("pictures/pic3.png")
 pic1ch = pic1
-# pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 200, 200, [62, 68, 148], 80)
-# pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 200, 200, [237, 28, 36], 150)
-# pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 200, 200, [255,255,255], 1)
+pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 200, 200, [62, 68, 148], 80, [123,255,123])
+pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 200, 200, [237, 28, 36], 150, [0,0,255])
+pic1ch = izmeni_kartinku.izmeni_kartinku(pic1ch, 100, 100, [255,255,255], 1, [255,247,19])
 
 while True:
     time.sleep(1/60)

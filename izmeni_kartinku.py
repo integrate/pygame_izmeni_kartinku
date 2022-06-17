@@ -1,5 +1,6 @@
 import pygame
 
+
 # def get_not_used_color(kartinka:pygame.Surface):
 #     """
 #     Looks for not used color in picture
@@ -15,12 +16,11 @@ import pygame
 #     raise Exception("Can not find unused color on picture to make it transparent")
 
 
-def izmeni_kartinku(kartinka:pygame.Surface, shirina, visota, uberi_cvet, porog):
-
-    #change pic size
+def izmeni_kartinku(kartinka: pygame.Surface, shirina, visota, uberi_cvet, porog, replace_color=[0, 0, 0, 0]):
+    # change pic size
     kartinka = pygame.transform.scale(kartinka, [shirina, visota])
 
-    #convert to picture with transparency data
+    # convert to picture with transparency data
     kartinka = kartinka.convert_alpha()
 
     # get mask of pixels with ignored colors
@@ -30,8 +30,6 @@ def izmeni_kartinku(kartinka:pygame.Surface, shirina, visota, uberi_cvet, porog)
     q2 = kartinka.copy()
     q2.fill(uberi_cvet)
 
-    #set pixels should be transparent, unset pixels should be taken from original picture
-    m1.to_surface(q2, setcolor=[0,0,0,0], unsetsurface=kartinka)
+    # set pixels should be transparent, unset pixels should be taken from original picture
+    m1.to_surface(q2, setcolor=replace_color, unsetsurface=kartinka)
     return q2
-
-
