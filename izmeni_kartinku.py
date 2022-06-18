@@ -28,7 +28,6 @@ def izmeni_kartinku(kartinka: pygame.Surface, shirina, visota, uberi_cvet, porog
 
     # make square filled with one of ignored colors
     q2 = kartinka.copy()
-    q2.fill(uberi_cvet)
 
     # set pixels should be transparent, unset pixels should be taken from original picture
     m1.to_surface(q2, setcolor=replace_color, unsetsurface=kartinka)
